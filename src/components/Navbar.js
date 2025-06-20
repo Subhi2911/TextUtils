@@ -18,7 +18,7 @@ export default function Navbar(props) {
         <li className="nav-item">
           <Link className="nav-link" to="/about">{props.aboutText}</Link>
         </li>
-        <li className="nav-item dropdown">
+        {/* <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -28,7 +28,7 @@ export default function Navbar(props) {
             <li><hr className="dropdown-divider"/></li>
             <li><a className="dropdown-item" href="/">Something else here</a></li>
           </ul>
-        </li>
+        </li> */}
         {/* <li className="nav-item">
           <a className="nav-link disabled" aria-disabled="true" href="/">Disabled</a>
         </li> */}

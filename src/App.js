@@ -24,7 +24,7 @@ function App() {
     })
     setTimeout(()=>{
       setAlert(null);
-    },1500);
+    },2000);
   }
   const toggleMode=()=>{
     if( mode==='light'){
@@ -47,19 +47,15 @@ function App() {
     <>
     {/* <Navbar title="Textutils" aboutText="About" mode={mode} toggleModeBlack={black()} toggleModeDarkBlue={darkBlue()} toggleModeLightPink={lightPink()} toggleModeWhite={white()}/> */}
     <Router>
-    <Navbar title="Textutils" aboutText="About" mode={mode} toggleMode={toggleMode}/>
-
+    <Navbar title="Textutils" aboutText="About" mode={mode} toggleMode={toggleMode} />
+    
     <Alert alert={alert}/>
+    {/* <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/> */}
     <div className="cntainer my-3">
       <Routes>
-          <Route exact path="/about" element={<About />}/>
-          
-          {/* <Route path="/users">
-            <Users />
-          </Route> */}
+          <Route exact path="/about" element={<About mode={mode} />}/> 
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>}/>
-    
-        </Routes>
+         </Routes>
     </div>
     
     
