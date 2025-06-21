@@ -45,14 +45,14 @@ export default function TextForm(props) {
         <h1>{props.heading}</h1>
         <div className="mb-3">
            {/* <label htmlFor="myBox">Example textarea</label>  */}
-           <textarea className="form-control" value ={text} onChange= {handleOnChange} style= {{backgroundColor: props.mode==='light'?'white':'black',
+           <textarea className="form-control" value ={text} onChange= {handleOnChange} style={{backgroundColor: props.colour,
             color: props.mode==='light'?'black':'white'}} id="myBox" rows="8"></textarea>
         </div>
-        <button className='btn btn-primary mx-2 my-1' onClick={handleUpClick}>Covert to Uppercase</button>
-        <button className='btn btn-primary mx-2 my-1' onClick={handleLowClick}>Covert to Lowercase</button>
-        <button className='btn btn-primary mx-2 my-1' onClick={handleClearClick}>Clear Text</button>
-        <button className='btn btn-primary mx-2 my-1' onClick={handleCopy}>Copy Text</button>
-        <button className='btn btn-primary mx-2 my-1' onClick={handleSpace}>Remove Extra Space</button>
+        <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleUpClick} style={{border:'2px solid black'}}> Covert to Uppercase</button>
+        <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleLowClick} style={{border:'2px solid black'}}>Covert to Lowercase</button>
+        <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleClearClick} style={{border:'2px solid black'}}>Clear Text</button>
+        <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleCopy} style={{border:'2px solid black'}}>Copy Text</button>
+        <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleSpace} style={{border:'2px solid black'}}>Remove Extra Space</button>
 
     </div>
     <div className="container my-1" style= {{color: props.mode==='light'?'black':'white'}}>
