@@ -13,10 +13,11 @@ import{
 } from "react-router-dom"
 
 function App() {
+
   const [mode, setMode]= useState('light');
   const [alert, setAlert] = useState(null);
   const [colour, setColour]= useState('white');
-
+  
   const showAlert=(message, type)=>{
     setAlert({
       msg: message,
@@ -33,14 +34,12 @@ function App() {
     document.body.classList.remove('bg-success')
     document.body.classList.remove('bg-warning')
     document.body.classList.remove('bg-primary')
-    //document.body.classList.remove('bg-light')
   }
 
   const toggleMode=(cls)=>{
     removeBodyClasses();
     document.body.classList.add('bg-'+cls);
     if (cls==='primary'){
-      //setMode("#471396");
       setMode("dark")
       setColour("#471396")
     }
@@ -83,7 +82,6 @@ function App() {
   return (
     <>
     {/* <Router> */}
-      {/* <Navbar title="Textutils" aboutText="About" mode={mode} toggleModeBlack={black()} toggleModeDarkBlue={darkBlue()} toggleModeLightPink={lightPink()} toggleModeWhite={white()}/> */}
       <Navbar title="Textutils" aboutText="About" mode={mode} toggleMode={toggleMode} colour={colour} />
       
       <Alert alert={alert}/>
@@ -92,10 +90,9 @@ function App() {
         <Routes>
           <Route path="/about" element={<About mode={mode} colour={colour} />}/> 
           <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} colour={colour}/>}/>
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} colour={colour}/>}/>
         </Routes>
     </div>
-    {/* git</Router> */}
+    {/* </Router> */}
     </>
   
   );  
