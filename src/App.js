@@ -82,7 +82,7 @@ function App() {
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
       {/* <Navbar title="Textutils" aboutText="About" mode={mode} toggleModeBlack={black()} toggleModeDarkBlue={darkBlue()} toggleModeLightPink={lightPink()} toggleModeWhite={white()}/> */}
       <Navbar title="Textutils" aboutText="About" mode={mode} toggleMode={toggleMode} colour={colour} />
       
@@ -95,7 +95,7 @@ function App() {
           <Route path="/home" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} colour={colour}/>}/>
         </Routes>
     </div>
-    </Router>
+    {/* </Router> */}
     </>
   
   );  
