@@ -7,7 +7,7 @@ import TextForm from './components/TextForm.js';
 import Alert from './Alert.js';
 
 import{
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom"
@@ -91,7 +91,8 @@ function App() {
       <div className="cntainer my-3">
         <Routes>
           <Route path="/about" element={<About mode={mode} colour={colour} />}/> 
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} colour={colour}/>}/>
+          <Route path="/TextUtils" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} colour={colour}/>}/>
+          <Route path="/home" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} colour={colour}/>}/>
         </Routes>
     </div>
     </Router>
