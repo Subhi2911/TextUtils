@@ -7,7 +7,7 @@ import TextForm from './components/TextForm.js';
 import Alert from './Alert.js';
 
 import{
-  HashRouter as Router,
+  // HashRouter as Router,
   Routes,
   Route,
 } from "react-router-dom"
@@ -95,7 +95,7 @@ function App() {
           <Route path="/home" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} colour={colour}/>}/>
         </Routes>
     </div>
-    {/* </Router> */}
+    {/* git</Router> */}
     </>
   
   );  
